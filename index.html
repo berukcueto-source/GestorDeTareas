@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestor de Tareas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>TO DO LIST</h1>
+        <p>Empieza a organizar tus tareas de forma facil y rapida</p>
+    </header>
+
+    <main class="contenedor-flexible">
+        
+        <aside class="columna-izquierda">
+            <section id="zona-formulario">
+                <h3>Nueva Tarea</h3>
+                <form id="tarea-form">
+                    <div class="campo">
+                        <label>Tarea:</label>
+                        <input type="text" id="titulo" placeholder="Ej: hacer la compra">
+                    </div>
+                    <div class="campo">
+                        <label>Prioridad de menor a mayor (1-5):</label>
+                        <input type="number" id="prioridad" placeholder="1">
+                    </div>
+                    <div class="campo">
+                        <label>Email:</label>
+                        <input type="email" id="email" placeholder="usuario@correo.com">
+                    </div>
+                    <div class="campo">
+                        <label>Fecha:</label>
+                        <input type="date" id="fecha">
+                    </div>
+                    <button type="submit" id="btn-guardar">Guardar Tarea</button>
+                </form>
+                <div id="mensaje-feedback"></div>
+            </section>
+
+            <section id="zona-resumen">
+                <h3>Resumen</h3>
+                <p>Total:  <strong id="total-tareas">0</strong></p>
+                <p>Prioridad Alta: <strong id="total-alta">0</strong></p>
+            </section>
+        </aside>
+
+        <section class="columna-derecha">
+            <div id="zona-busqueda">
+                <input type="text" id="input-busqueda" placeholder="🔍 Buscar tarea por nombre...">
+            </div>
+
+            <div id="listado-seccion">
+                <h3>TareasPendientes</h3>
+                <div id="contenedor-tareas">
+                    </div>
+                <button id="btn-reset">Limpiar todo</button>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

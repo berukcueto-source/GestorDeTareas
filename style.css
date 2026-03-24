@@ -1,0 +1,83 @@
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;        
+    background-color: #ebeae5;
+    margin: 20;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+/* --- TRUCO PARA LAS COLUMNAS --- */
+.contenedor-flexible {
+    text-align: left;   /* Alinea el texto a la izquierda */
+    display: flex;       /* Activa el modo flexible */
+    gap: 20px;           /* Espacio entre columnas */
+    max-width: 1000px;   /* Ancho máximo de la web */
+    margin:  auto;      /* Centrar en pantalla */
+}
+
+.columna-izquierda {
+    flex: 1;             /* Ocupa 1 parte del espacio */
+}
+
+.columna-derecha {
+    flex: 2;             /* Ocupa 2 partes (es más ancha) */
+}
+
+/* Si la pantalla es pequeña (móvil), ponemos una columna sobre otra */
+@media (max-width: 768px) {
+    .contenedor-flexible {
+        flex-direction: column;
+    }
+}
+
+/* Estilos de las cajas */
+section, aside > section {
+    background: #a7dcea;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(87, 140, 165, 0.695);
+}
+
+/* Formulario e inputs */
+.campo { margin-bottom: 12px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; }
+input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+
+#btn-guardar {
+    background-color: #de94d4;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Buscador arriba del listado */
+#input-busqueda {
+    font-size: 16px;
+    border: 2px solid #6697a3;
+}
+
+/* Tarjetas de tareas */
+.tarea-card {
+    padding: 15px 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.completada {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.btn-borrar { background: #aa4c4c; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+.btn-estado { background: #4e854d; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+#btn-reset { font-size: 16px; background: #de94d4; color: white; border: none; padding: 10px; width: 100%; margin-top: 20px; cursor: pointer; }
